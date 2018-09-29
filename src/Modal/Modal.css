@@ -1,0 +1,152 @@
+.modal-container {
+    z-index: 9999;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 350px;
+    box-shadow: inset 0 0 1px 0 #000;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    transition: all 2s linear;
+}
+
+.modal-title {
+    padding: 10px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-content {
+    padding: 10px 16px;
+}
+
+.modal-footer {
+    text-align: right;
+    padding: 10px 16px;
+}
+.modal-confirm {
+    background-color: red !important;
+    margin-left: 6px;
+}
+.modal-cancel {
+    margin-left: 15px;
+}
+
+.hidden {
+    display: none;
+}
+.disappear {
+    opacity: 0;
+}
+
+.mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+.float-right {
+    float: right;
+}
+
+.button {
+    padding: 5px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    height: 32px;
+    line-height: 32px;
+    color: #111111;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+}
+
+.animation-duration {
+    animation-duration: .6s;
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
+
+.flipOutX {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    -webkit-animation-name: flipOutX;
+    animation-name: flipOutX;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animation-duration {
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0
+    }
+
+    0%,40% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-20deg);
+        transform: perspective(400px) rotateX(-20deg)
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg);
+        opacity: 1
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotateX(-5deg);
+        transform: perspective(400px) rotateX(-5deg)
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+}
+
+@-webkit-keyframes flipOutX {
+    0% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+    }
+
+    30% {
+        -webkit-transform: perspective(400px) rotateX(-20deg);
+        transform: perspective(400px) rotateX(-20deg);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0
+    }
+}
